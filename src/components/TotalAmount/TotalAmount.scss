@@ -3,8 +3,27 @@
   flex-direction: column;
   width: 31.7%;
   overflow: hidden;
+  @media (max-width: 1196px) {
+    width: 50%;
+    margin-bottom: 44px;
+  }
+  @media (max-width: 710px) {
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    margin-bottom: 16px;
+    &:nth-child(2n) {
+      margin-bottom: 24px;
+    }
+  }
   .total-amount-description {
     margin-bottom: 9px;
+    @media (max-width: 1196px) {
+      color: #333333;
+    }
+    @media (max-width: 600px) {
+      margin-bottom: 2px;
+    }
   }
   .price-container {
     display: flex;
@@ -12,14 +31,29 @@
     .total-sum {
       color: #575757;
       margin-bottom: 0;
+      @media (max-width: 1196px) {
+        color: #333333;
+      }
+      @media (max-width: 600px) {
+        font-size: 22px;
+      }
     }
     .total-sum-number {
       margin-right: 15px;
+      @media (max-width: 600px) {
+        margin-right: 6px;
+      }
     }
     .total-sum-measure {
       display: inline-block;
       align-self: flex-start;
       line-height: 38px;
+      @media (max-width: 710px) {
+        line-height: 35px;
+      }
+      @media (max-width: 600px) {
+        line-height: 26px;
+      }
     }
   }
 }

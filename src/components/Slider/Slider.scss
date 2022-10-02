@@ -3,12 +3,27 @@
   flex-direction: column;
   max-width: 427px;
   width: 31.7%;
+  @media (max-width: 1196px) {
+    width: 100%;
+    max-width: 1102px;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+  @media (max-width: 1196px) {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
 
   .slider-block {
     background-color: #F3F3F4;
     padding: 16px 24px;
     border-radius: 16px;
     position: relative;
+    @media (max-width: 600px) {
+      padding: 16px 20px;
+    }
     .chosen-value-container {
       display: flex;
       justify-content: space-between;
@@ -22,6 +37,10 @@
         border: none;
         max-width: 170px;
         overflow: hidden;
+        @media (max-width: 600px) {
+          font-size: 22px;
+          color: #333E48;
+        }
       }
       .chosen-value-percentage {
         font-size: 20px;
@@ -30,6 +49,9 @@
         border-radius: 16px;
         max-width: 45px;
         display: flex;
+        @media (max-width: 1196px) {
+          padding: 14px;
+        }
         .percentage-input {
           max-width: 24px;
           font-size: 20px;

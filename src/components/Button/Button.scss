@@ -10,4 +10,11 @@
   max-height: 68px;
   cursor: pointer;
   width: 31.7%;
+  min-width: 345px;
+  @media (max-width: 600px) {
+    font-size: 22px;
+    padding: 18px 51px;
+    min-width: 280px;
+    width: 100%;
+  }
 }
