@@ -1,0 +1,11 @@
+.total-amount-container {
+  display: flex;
+  flex-direction: column;
+  .total-amount-description {
+    margin-bottom: 8px;
+  }
+  .total-sum {
+    color: #575757;
+    margin-bottom: 0;
+  }
+}

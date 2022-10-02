@@ -1,0 +1,45 @@
+.main-page {
+  padding: 213px 50px;
+  text-align: left;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  .main-title {
+    font-family: Nekst, sans-serif;
+    max-width: 673px;
+    font-size: 54px;
+    font-weight: 900;
+    color: #111111;
+    line-height: 48px;
+    margin-bottom: 32px;
+  }
+  .field-description {
+    font-family: Gilroy, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #575757;
+    margin-bottom: 24px;
+  }
+  .sliders-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+  }
+  .totals-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btn-send {
+    padding: 14px 92px 18px;
+    background-color: #FF9514;
+    border-radius: 40px;
+    color: #FFFFFF;
+    font-family: Nekst, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    border: none;
+    max-height: 68px;
+    cursor: pointer;
+  }
+}
