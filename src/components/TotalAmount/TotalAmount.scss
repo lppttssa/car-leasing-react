@@ -1,13 +1,25 @@
 .total-amount-container {
   display: flex;
   flex-direction: column;
-  max-width: 30%;
+  width: 31.7%;
   overflow: hidden;
   .total-amount-description {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
   }
-  .total-sum {
-    color: #575757;
-    margin-bottom: 0;
+  .price-container {
+    display: flex;
+    align-items: center;
+    .total-sum {
+      color: #575757;
+      margin-bottom: 0;
+    }
+    .total-sum-number {
+      margin-right: 15px;
+    }
+    .total-sum-measure {
+      display: inline-block;
+      align-self: flex-start;
+      line-height: 38px;
+    }
   }
 }

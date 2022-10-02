@@ -1,7 +1,7 @@
 .main-page {
   padding: 213px 50px;
   text-align: left;
-  max-width: 1440px;
+  max-width: 1346px;
   margin-left: auto;
   margin-right: auto;
   .main-title {
@@ -19,6 +19,8 @@
     font-weight: 400;
     color: #575757;
     margin-bottom: 24px;
+    line-height: 24px;
+    display: inline-block;
   }
   .sliders-container {
     display: flex;
@@ -29,17 +31,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .btn-send {
-    padding: 14px 92px 18px;
-    background-color: #FF9514;
-    border-radius: 40px;
-    color: #FFFFFF;
-    font-family: Nekst, sans-serif;
-    font-size: 30px;
-    font-weight: 900;
-    border: none;
-    max-height: 68px;
-    cursor: pointer;
   }
 }

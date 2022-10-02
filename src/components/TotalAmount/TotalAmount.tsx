@@ -15,7 +15,10 @@ export const TotalAmount = (props: TotalAmountProps) => {
     return (
         <div className='total-amount-container'>
             <span className='field-description total-amount-description'>{text}</span>
-            <span className='main-title total-sum'>{Math.floor(sum)}</span>
+            <div className='price-container'>
+                <span className='main-title total-sum total-sum-number'>{sum ? Math.floor(sum).toLocaleString() : 'Ошибка!'}</span>
+                <span className='main-title total-sum total-sum-measure'>₽</span>
+            </div>
         </div>
     );
 

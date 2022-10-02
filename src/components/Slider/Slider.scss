@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   max-width: 427px;
-  width: 100%;
+  width: 31.7%;
 
   .slider-block {
     background-color: #F3F3F4;
@@ -21,18 +21,28 @@
         background-color: transparent;
         border: none;
         max-width: 170px;
+        overflow: hidden;
       }
       .chosen-value-percentage {
         font-size: 20px;
         padding: 15px 17px;
         background-color: #EBEBEC;
         border-radius: 16px;
-        max-width: 35px;
+        max-width: 45px;
         display: flex;
         .percentage-input {
           max-width: 24px;
           font-size: 20px;
         }
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type=number] {
+        -moz-appearance: textfield;
       }
     }
     .slider {
@@ -49,32 +59,30 @@
       height: 2px;
       background: #FF9514;
       outline: none;
-      opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-      -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+      opacity: 0.7;
+      -webkit-transition: .2s;
       transition: opacity .2s;
     }
 
-    /* Mouse-over effects */
     .slider:hover {
-      opacity: 1; /* Fully shown on mouse-over */
+      opacity: 1;
     }
 
-    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
     .slider::-webkit-slider-thumb {
-      -webkit-appearance: none; /* Override default look */
+      -webkit-appearance: none;
       appearance: none;
-      width: 20px; /* Set a specific slider handle width */
-      height: 20px; /* Slider handle height */
-      background: #FF9514; /* Green background */
-      cursor: pointer; /* Cursor on hover */
+      width: 20px;
+      height: 20px;
+      background: #FF9514;
+      cursor: pointer;
       border-radius: 20px;
     }
 
     .slider::-moz-range-thumb {
-      width: 25px; /* Set a specific slider handle width */
-      height: 25px; /* Slider handle height */
-      background: #4CAF50; /* Green background */
-      cursor: pointer; /* Cursor on hover */
+      width: 20px;
+      height: 20px;
+      background: #FF9514;
+      cursor: pointer;
     }
   }
   .slider-block-small-paddings {
