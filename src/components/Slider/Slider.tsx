@@ -4,7 +4,7 @@ import '../CountingPage/CountingPage.scss';
 type SliderProps = {
     text: string,
     value: number,
-    mimValue: number,
+    minValue: number,
     maxValue: number,
     handleInputChange: (event: any) => void,
     measureUnit: string,
@@ -14,7 +14,7 @@ type SliderProps = {
 
 export const Slider = (props: SliderProps) => {
     const {
-        text, value, mimValue, maxValue, handleInputChange, measureUnit, isPercentageUnit, percentValue,
+        text, value, minValue, maxValue, handleInputChange, measureUnit, isPercentageUnit, percentValue,
     } = props;
 
     return  (
@@ -30,13 +30,13 @@ export const Slider = (props: SliderProps) => {
                   {!isPercentageUnit ?
                       <span className='chosen-value'>{measureUnit}</span> :
                       <span className='chosen-value chosen-value-percentage'>
-                          <input type='text' className='chosen-value percentage-input'
+                          <input type='number' className='chosen-value percentage-input'
                                    value={percentValue} onChange={handleInputChange}/>
                                    %
                       </span>
                   }
               </div>
-              <input type="range" min={mimValue} max={maxValue} value={isPercentageUnit ? percentValue : value}
+              <input type="range" min={minValue} max={maxValue} value={isPercentageUnit ? percentValue : value}
                      className="slider" id="myRange" onInput={handleInputChange}/>
           </div>
       </div>
