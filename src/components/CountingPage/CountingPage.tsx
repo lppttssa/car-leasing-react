@@ -4,6 +4,7 @@ import {useState} from "react";
 import {TotalAmount} from "../TotalAmount/TotalAmount";
 import {getValue} from "../../functions";
 import {Button} from "../Button/Button";
+import useWindowDimensions from "../../hooks";
 
 const MIN_CAR_PRICE = 1000000;
 const MAX_CAR_PRICE = 6000000;
@@ -22,6 +23,8 @@ export const CountingPage = ():JSX.Element => {
     const [monthNumber, setMonthNumber] = useState(60);
     const [isLoading, setLoading] = useState(false);
     const [timer, setTimer] = useState(null);
+
+    const { width } = useWindowDimensions();
 
     const postData = async () => {
         const response = await fetch(API_URL, {
@@ -96,16 +99,16 @@ export const CountingPage = ():JSX.Element => {
             <h1 className='main-title'>Рассчитайте стоимость автомобиля в лизинг</h1>
             <form onSubmit={handleFormSubmit}>
                 <div className='sliders-container'>
-                    <Slider text='Стоимость автомобиля' value={carPrice} minValue={MIN_CAR_PRICE}
+                    <Slider text={width > 600 ? 'Стоимость автомобиля' : 'Желаемая сумма кредита'} value={carPrice} minValue={MIN_CAR_PRICE}
                             maxValue={MAX_CAR_PRICE} handleInputChange={handleCarPriceChange}
-                            measureUnit='₽' isDisables={isLoading}/>
+                            measureUnit='₽' isDisabled={isLoading}/>
                     <Slider text='Первоначальный взнос' value={Math.floor(deposit / 100 * carPrice)}
                             percentValue={deposit} minValue={MIN_DEPOSIT} maxValue={MAX_DEPOSIT}
                             handleInputChange={handleDepositChange} measureUnit='%' isPercentageUnit
-                            isDisables={isLoading}/>
+                            isDisabled={isLoading}/>
                     <Slider text='Срок лизинга' value={monthNumber} minValue={MIN_MONTH_NUMBER}
                             maxValue={MAX_MONTH_NUMBER} handleInputChange={handleMonthNumberChange}
-                            measureUnit='мес.' isDisables={isLoading}/>
+                            measureUnit='мес.' isDisabled={isLoading}/>
                 </div>
                 <div className='totals-container'>
                     <TotalAmount text='Сумма договора лизинга' sum={deposit/100 * carPrice + monthNumber * getMonthPayment()}/>

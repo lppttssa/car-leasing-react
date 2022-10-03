@@ -17,4 +17,21 @@
     min-width: 280px;
     width: 100%;
   }
+  &:hover {
+    background-color: #111111;
+  }
+  &:active {
+    background-color: #575757;
+  }
+  &.disabled {
+    opacity: 0.4;
+    &:hover {
+      background-color: #FF9514;
+      opacity: 0.4;
+    }
+    &:active {
+      background-color: #FF9514;
+      opacity: 0.4;
+    }
+  }
 }

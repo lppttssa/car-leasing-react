@@ -20,7 +20,7 @@ export const Button  = (props: ButtonProps) => {
   const { width } = useWindowDimensions();
 
   return (
-      <button className='btn-send' type='submit' disabled={isLoading}>
+      <button className={'btn-send' + (isLoading ? ' disabled' : '')} type='submit' disabled={isLoading}>
           {isLoading ? <ClipLoader color={'#ffffff'} loading={isLoading} cssOverride={override} size={width > 600 ? 33 : 22.5} /> : 'Оставить заявку'}
       </button>
   );
